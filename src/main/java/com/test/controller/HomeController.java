@@ -22,8 +22,12 @@ public class HomeController {
 		}else {
 			return new ResponseEntity<String>("Odd Number",HttpStatus.OK);
 		}
-		
+
 	}
-	
+
+	@GetMapping("/")
+	public ResponseEntity<?> getMappingTest(){
+		return new ResponseEntity("Hello Dear", HttpStatus.ACCEPTED);
+	}
 	
 }
