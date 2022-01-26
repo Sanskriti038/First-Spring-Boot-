@@ -16,7 +16,7 @@ public class HomeController {
 	public ResponseEntity<String> home(@RequestParam("number") int i) {
 		System.out.println("Controller Called!");
 		if(i==0) {
-			return new ResponseEntity<String>("Not Define",HttpStatus.NOT_ACCEPTABLE);
+			return new ResponseEntity<String>("Invalid Input",HttpStatus.NOT_ACCEPTABLE);
 		}else if(i%2==0) {
 			return new ResponseEntity<String>("Even Number",HttpStatus.OK);
 		}else {
@@ -24,6 +24,8 @@ public class HomeController {
 		}
 		
 	}
+
+
 	
 	
 }
